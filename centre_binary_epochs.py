@@ -109,7 +109,7 @@ def write_updated_par(par, original_lines, t0_tasc_line_number, new_parfile):
         for i, line in enumerate(original_lines):
             if i == t0_tasc_line_number:
                 param = 'T0' if 'T0' in par else 'TASC'
-                file.write(f"{param} {par[param]}\n")
+                file.write(f"{param} {par[param]} 1\n")
             else:
                 file.write(line)
 
